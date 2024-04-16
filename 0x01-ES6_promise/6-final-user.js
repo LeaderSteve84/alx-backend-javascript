@@ -11,7 +11,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       value: result.status === 'fulfilled' ? result.value : result.reason.message,
     })))
     .catch((error) => {
-      console.log(new Error('Error handleProfileSignup', error));
+      console.error(new Error('Error handleProfileSignup', error));
       return [];
     });
 }
