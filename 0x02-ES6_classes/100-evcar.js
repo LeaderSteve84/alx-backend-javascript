@@ -6,8 +6,17 @@ class EVCar extends Car {
     this._range = range;
   }
 
+  // getter for range attribute
+  get range() {
+    return this._range;
+  }
+
+  // Override cloneCar method to return an instance of Car
+  /* eslint-disable class-methods-use-this */
   cloneCar() {
-    return new Car().cloneCar();
+    // const { _brand, _motor, _color } = this;
+    return new Car();
+    // _brand, _motor, _color);
   }
 }
 
